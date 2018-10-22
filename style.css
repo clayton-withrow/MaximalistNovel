@@ -1,12 +1,4 @@
-
-header {
-  width: 100%;
-  margin: 0 auto;
-  background-color: #DDA288;
-}
-
 body {
-
   margin: 0 auto;
   background-color: #8593AE;
 }
@@ -17,16 +9,18 @@ img {
   border-color: black;
 }
 
-.wrapper {
-  max-width: 960px;
-  padding: 0 24px;
-  margin: 0 auto;
+.blurb {
+  background-color: #7E675E;
+}
+
+.prom {
+  width: 100%;
+  background-color: #DDA288;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 h1 {
+  margin-top: 0;
 
-}
-
-.blurb {
-  background-color: #7E675E;
 }

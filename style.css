@@ -1,26 +1,46 @@
-body {
+.prom {
+  background-color: #1995AD;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card {
   margin: 0 auto;
-  background-color: #8593AE;
+  float: none;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: black;
+  background-color: #A1D6E2;
+}
+
+body {
+  background-color: #F1F1F2;
 }
 
 img {
+  width: 261px;
+  height: 382px;
+}
+
+.img-trip {
+  width: 500px;
+  height: 200px;
   border-style: solid;
-  border-width: 5px;
+  border-width: 1px;
   border-color: black;
 }
 
 .blurb {
-  background-color: #7E675E;
+  background-color: #BCBABE;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
 }
 
-.prom {
-  width: 100%;
-  background-color: #DDA288;
-  padding-top: 0;
-  padding-bottom: 0;
+.tert {
+    background-color: #A1D6E2;
 }
 
 h1 {
   margin-top: 0;
-
 }

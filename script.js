@@ -24,7 +24,6 @@ VerbalInput.forEach(function(element){
 }
 )
 
-
 //Psychological Input
 PsychInput.forEach(function(element){
   element.addEventListener("change", function() {
@@ -38,7 +37,6 @@ PsychInput.forEach(function(element){
   })
 }
 )
-
 
 //Cultural Input
 CultInput.forEach(function(element){
@@ -54,7 +52,6 @@ CultInput.forEach(function(element){
 }
 )
 
-
 //Historical Input
 HistInput.forEach(function(element){
   element.addEventListener("change", function() {
@@ -69,7 +66,6 @@ HistInput.forEach(function(element){
 }
 )
 
-
 //Humor Input
 HumorInput.forEach(function(element){
   element.addEventListener("change", function() {
@@ -83,7 +79,6 @@ HumorInput.forEach(function(element){
   })
 }
 )
-
 
 //Book Scores
 var GRscore = VCscore + HIscore + HUscore;

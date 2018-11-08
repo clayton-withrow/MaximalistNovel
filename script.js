@@ -9,6 +9,20 @@ var PsychInput = document.getElementsByName("PsychOptions");
 var CultInput = document.getElementsByName("CultOptions");
 var HistInput = document.getElementsByName("HistOptions");
 var HumorInput = document.getElementsByName("HumorOptions");
+var GRscore = 0;
+var IJscore = 0;
+var UNscore = 0;
+var WTscore = 0;
+var TCscore = 0;
+var RBscore = 0;
+var DCscore = 0;
+const GRdisplay = document.querySelector('#GRoutput');
+const IJdisplay = document.querySelector('#IJoutput');
+const UNdisplay = document.querySelector('#UNoutput');
+const WTdisplay = document.querySelector('#WToutput');
+const TCdisplay = document.querySelector('#TCoutput');
+const RBdisplay = document.querySelector('#RBoutput');
+const DCdisplay = document.querySelector('#DCoutput');
 
 //Verbal Input
 VerbalInput.forEach(function(element){
@@ -16,8 +30,7 @@ VerbalInput.forEach(function(element){
     for (var i=0; i<VerbalInput.length; i++) {
       if(VerbalInput[i].checked){
         VCscore = i+1;
-        console.log(VCscore);
-        break;
+        handleChange();
       }
     }
   })
@@ -30,8 +43,7 @@ PsychInput.forEach(function(element){
     for (var i=0; i<PsychInput.length; i++) {
       if(PsychInput[i].checked){
         PIscore = i+1;
-        console.log(PIscore);
-        break;
+        handleChange();
       }
     }
   })
@@ -44,8 +56,7 @@ CultInput.forEach(function(element){
     for (var i=0; i<CultInput.length; i++) {
       if(CultInput[i].checked){
         CEscore = i+1;
-        console.log(CEscore);
-        break;
+        handleChange();
       }
     }
   })
@@ -58,8 +69,7 @@ HistInput.forEach(function(element){
     for (var i=0; i<HistInput.length; i++) {
       if(HistInput[i].checked){
         HIscore = i+1;
-        console.log(HIscore);
-        break;
+        handleChange();
       }
     }
   })
@@ -72,19 +82,31 @@ HumorInput.forEach(function(element){
     for (var i=0; i<HumorInput.length; i++) {
       if(HumorInput[i].checked){
         HUscore = i+1;
-        console.log(HUscore);
-        break;
+        handleChange();
       }
     }
   })
 }
 )
 
-//Book Scores
-var GRscore = VCscore + HIscore + HUscore;
-var IJscore = VCscore + HUscore + PIscore;
-var UNscore = HUscore + HIscore + PIscore;
-var WTscore = CEscore + HIscore + PIscore;
-var TCscore = HUscore + PIscore + VCscore;
-var RBscore = CEscore + PIscore + HUscore;
-var DCscore = VCscore + CEscore;
+//Score tabulation
+var updateScores = function() {
+  GRscore = VCscore + HIscore + HUscore;
+  IJscore = VCscore + HUscore + PIscore;
+  UNscore = HUscore + HIscore + PIscore;
+  WTscore = CEscore + HIscore + PIscore;
+  TCscore = HUscore + PIscore + VCscore;
+  RBscore = CEscore + PIscore + HUscore;
+  DCscore = VCscore + CEscore;
+  GRdisplay.textContent = GRscore;
+  IJdisplay.textContent = IJscore;
+  UNdisplay.textContent = UNscore;
+  WTdisplay.textContent = WTscore;
+  TCdisplay.textContent = TCscore;
+  RBdisplay.textContent = RBscore;
+  DCdisplay.textContent = DCscore;
+}
+
+var handleChange = function() {
+  updateScores();
+}

@@ -4,11 +4,14 @@ var PIscore = 0;
 var CEscore = 0;
 var HIscore = 0;
 var HUscore = 0;
+
+//The value from each segment of radio buttons is detected and put into a variable.
 var VerbalInput = document.getElementsByName("VerbalOptions");
 var PsychInput = document.getElementsByName("PsychOptions");
 var CultInput = document.getElementsByName("CultOptions");
 var HistInput = document.getElementsByName("HistOptions");
 var HumorInput = document.getElementsByName("HumorOptions");
+
 var GRscore = 0;
 var IJscore = 0;
 var UNscore = 0;
@@ -16,6 +19,7 @@ var WTscore = 0;
 var TCscore = 0;
 var RBscore = 0;
 var DCscore = 0;
+
 const GRdisplay = document.querySelector('#GRoutput');
 const IJdisplay = document.querySelector('#IJoutput');
 const UNdisplay = document.querySelector('#UNoutput');
@@ -24,6 +28,8 @@ const TCdisplay = document.querySelector('#TCoutput');
 const RBdisplay = document.querySelector('#RBoutput');
 const DCdisplay = document.querySelector('#DCoutput');
 
+//For each section of radio buttons a change is detected and the respective score is added to accordingly.
+//A function is then ran to within to display the scores in the HTML.
 //Verbal Input
 VerbalInput.forEach(function(element){
   element.addEventListener("change", function() {

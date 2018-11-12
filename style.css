@@ -1,8 +1,10 @@
+/* Header stylization, font taken from Google fonts. */
 .prom {
   background-color: #1995AD;
   font-family: 'Poppins', sans-serif;
 }
 
+/* Card stylization.*/
 .card {
   margin: 0 auto;
   float: none;
